@@ -7,8 +7,8 @@ To Start the Frontend Server ,
 4. The website will run at http://localhost:3000/
 
 
-To Start the Backend Server , 
-1.Open a New Teminal (in VS code ) and type the below commands ,
+To Start the Backend Server ,
+1.Open a New Teminal (in VS code ) and type the below commands
 2. cd backend
 3. npm i express cors pg body-parser
 4. Then type , node index.js
