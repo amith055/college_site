@@ -7,7 +7,7 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 10px 20px;
+  padding: 5px 10px;
 }
 
 .logo img {
@@ -132,5 +132,39 @@ nav ul a:hover, .toggle-btn:hover, .dropdown button:hover {
 .more-options a:hover {
   background-color: #ddd;
   border-radius: 5px;
+}
+
+/* Responsive Navigation */
+@media screen and (max-width: 100px) {
+  .top {
+    padding: 5px;
+  }
+
+  .logo img {
+    height: 40px;
+  }
+
+  .college-name {
+    font-size: 20px;
+  }
+
+  nav ul {
+    display: flex;
+    gap: 10px;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background-color: #e9ecee;
+    padding: 10px;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+  }
+
+  nav ul a {
+    padding: 10px 15px;
+    text-align: center;
+  }  
+  
 }
 

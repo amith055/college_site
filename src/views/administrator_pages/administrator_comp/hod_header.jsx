@@ -1,11 +1,14 @@
 import React, { useState, useEffect, useRef } from "react";
-import "./comp_css/header.css";
+import "./header1.css";
+import { useNavigate } from "react-router-dom";
+import Swal from "sweetalert2";
 
-const Header = () => {
+const HODHeader = () => {
   const [showMore, setShowMore] = useState(false);
   const [showDropdown, setShowDropdown] = useState(false);
   const dropdownRef = useRef(null);
   const moreRef = useRef(null);
+  const navigate = useNavigate();
 
   // Toggle More Options
   const toggleMoreOptions = () => {
@@ -16,6 +19,27 @@ const Header = () => {
   const toggleDropdown = () => {
     setShowDropdown(!showDropdown);
   };
+
+
+  const handleLogout = () => {
+    Swal.fire({
+      title: "Logout?",
+      text: "Are you sure you want to log out?",
+      icon: "question",
+      showCancelButton: true,
+      confirmButtonText: "Logout",
+      cancelButtonText: "Cancel",
+      background: "#fff",
+      color: "#111",
+      confirmButtonColor: "#ff4d4d",
+      cancelButtonColor: "#555",
+    }).then((result) => {
+      if (result.isConfirmed) {
+        navigate("/");
+      }
+    });
+  };
+  
 
   // Close dropdown and more menu when clicking outside
   useEffect(() => {
@@ -46,42 +70,29 @@ const Header = () => {
         {/* Navigation Menu */}
         <nav className="container">
           <ul className="menu">
-            <li><a href="/">Home</a></li>
-            <li><a href="/admission">Admissions</a></li>
-            <li><a href="/placements">Placements</a></li>
-            <li><a href="/hostel">Hostel</a></li>
-            <li><a href="/library">Library</a></li>
-            <li><a href="/faculty">Faculty</a></li>
-            <li><a href="/events">Events</a></li>
+            <li><a href="/hodprofile">Profile</a></li>
+            <li><a href="/dept_members">Department Members</a></li>
+            <li><a href="/assignclass">Assign Class</a></li>
+            <li><a href="/timetable">Time Tables</a></li>
+            <li><a href="/saral">Saral</a></li>
+            <li><a href="/attendancerport_hod">Attendance Report</a></li>
+            <li><a href="/results">Results</a></li>
+            <li><a href="/changerole">Change Role</a></li>
+            <li><a href="/createform">Create Form</a></li>
+            <li><a onClick={handleLogout}>Log Out</a></li>
 
             {/* Administration Dropdown */}
             <div className="dropdown" ref={dropdownRef}>
-              <button onClick={toggleDropdown}>Administrators</button>
+              <button onClick={toggleDropdown}>Demo</button>
               {showDropdown && (
                 <div className="dropdown-content">
                   <a href="/plogin">Principal</a>
-                  <a href="/hlogin">HoD</a>
                   <a href="/flogin">Faculty</a>
-                  <a href="/slogin"> Management Staff</a>
+                  <a href="/hlogin">HoD</a>
+                  <a href="/slogin">Staff</a>
                 </div>
               )}
             </div>
-
-            {/* More Options Dropdown */}
-            <li ref={moreRef}>
-              <button className="toggle-btn" onClick={toggleMoreOptions}> ☰ </button>
-              {showMore && (
-                <ul className="more-options">
-                  <li><a href="/acadamiccalender">Academic Calendar</a></li>
-                  <li><a href="/facilities">Facilities</a></li>
-                  <li><a href="/alumni">Alumni</a></li>
-                  <li><a href="/academics">Academics</a></li>
-                  <li><a href="/gallery">Gallery</a></li>
-                  <li><a href="/notifications">Notifications</a></li>
-                  <li><a href="/about">About us</a></li>
-                </ul>
-              )}
-            </li>
           </ul>
         </nav>
       </div>
@@ -89,4 +100,4 @@ const Header = () => {
   );
 };
 
-export default Header;
+export default HODHeader;

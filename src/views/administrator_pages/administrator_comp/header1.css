@@ -1,0 +1,171 @@
+.header {
+    background-color: #e9ecee;
+    padding: 20px 0;
+  }
+  
+  .top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 5px 10px;
+  }
+  
+  .logo img {
+    height: 50px;
+  }
+  /* Logo container to align logo and text */
+  .logo-container {
+    display: flex;
+    align-items: center;
+    gap: 15px; /* Space between logo and text */
+  }
+  
+  /* Logo styling */
+  .logo {
+    height: 50px; /* Adjust as needed */
+  }
+  
+  /* College Name Styling */
+  .college-name {
+    margin-right: 20px;
+    font-size: 23px;
+    font-weight: bold;
+    color: #333;
+    white-space: nowrap; /* Prevents text from breaking */
+  }
+  
+  
+  nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+  }
+  
+  nav ul.menu {
+    display: flex;
+    align-items: center;
+  }
+  
+  nav ul li {
+    display: inline-block;
+    position: relative;
+  }
+  
+  nav ul a, .toggle-btn, .dropdown button {
+    text-decoration: none;
+    padding: 10px 15px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    color: #333;
+  }
+  
+  nav ul a:hover, .toggle-btn:hover, .dropdown button:hover {
+    background-color: #ddd;
+    border-radius: 5px;
+  }
+  
+  /* Dropdown menu */
+  .dropdown {
+    position: relative;
+    display: inline-block;
+  }
+  
+  .dropdown-content {
+    display: block;
+    position: absolute;
+    background-color: white;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+    min-width: 160px;
+    top: 100%;
+    left: 0;
+  }
+  
+  .dropdown-content a {
+    display: block;
+    padding: 10px;
+    text-decoration: none;
+    color: black;
+  }
+  
+  .dropdown-content a:hover {
+    background-color: #ddd;
+  }
+  
+  /* More Options Dropdown - Vertical Layout */
+  .more-options {
+    position: absolute;
+    background: white;
+    list-style: none;
+    padding: 10px;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    top: 100%;
+    right: 0; /* Move the dropdown to the left if it's near the edge */
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
+    z-index: 1000;
+    width: 250px; /* Ensures it doesn't shrink */
+    max-width: 250px;
+  }
+  
+  /* Ensure dropdown stays fully visible */
+  .more-options li {
+    padding: 8px;
+    text-align: left;
+  }
+  
+  .more-options a {
+    text-decoration: none;
+    color: black;
+    display: block;
+    padding: 8px;
+  }
+  
+  .more-options a:hover {
+    background-color: #ddd;
+    border-radius: 5px;
+  }
+  
+  /* Responsive Navigation */
+  @media screen and (max-width: 100px) {
+    .top {
+      padding: 5px;
+    }
+  
+    .logo img {
+      height: 40px;
+    }
+  
+    .college-name {
+      font-size: 20px;
+    }
+  
+    nav ul {
+      display: flex;
+      gap: 10px;
+      position: absolute;
+      top: 100%;
+      left: 0;
+      width: 100%;
+      background-color: #e9ecee;
+      padding: 10px;
+      box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+      z-index: 1000;
+    }
+  
+    nav ul a {
+      padding: 10px 15px;
+      text-align: center;
+    }  
+    
+  }
+  
+  
