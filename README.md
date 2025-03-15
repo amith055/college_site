@@ -8,7 +8,7 @@ To Start the Frontend Server ,
 
 
 To Start the Backend Server ,
-1.Open a New Teminal (in VS code ) and type the below commands
+1. Open a New Teminal (in VS code ) and type the below commands
 2. cd backend
 3. npm i express cors pg body-parser
 4. Then type , node index.js
