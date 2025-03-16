@@ -7,7 +7,6 @@ import Admission from "./views/admissions";
 import Placements from "./views/placements";
 import Hostel from "./views/hostel";
 import Library from "./views/library";
-import Faculty from "./views/faculty";
 import Events from "./views/events";
 import FacultyHome from "./views/administrator_pages/facultyhome";
 import HODHome from  "./views/administrator_pages/hodhome";
@@ -19,7 +18,7 @@ import Academics from "./views/academics";
 import Gallery from "./views/gallery";
 import Notifications from "./views/notifications";
 import About from "./views/aboutus";
-
+import Departments from "./views/department";
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
@@ -32,11 +31,11 @@ root.render(
         <Route path="/placements" element={<Placements />} />
         <Route path="/hostel"element={<Hostel />} />
         <Route path="/library" element={<Library />} />
-        <Route path="/faculty" element={<Faculty />} />
         <Route path="/events" element={<Events />} />
         <Route path="/acadamiccalender" element={<AcadamicCalender />} />
         <Route path="/facilities" element={<Facilities />} />
         <Route path="/alumni" element={<Alumni />} />
+        <Route path="/departments" element={<Departments />} />
         <Route path="/academics" element={<Academics />} />
         <Route path="/gallery" element={<Gallery />} />
         <Route path="/notifications" element={<Notifications />} />

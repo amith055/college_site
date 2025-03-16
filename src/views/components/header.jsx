@@ -51,9 +51,8 @@ const Header = () => {
             <li><a href="/placements">Placements</a></li>
             <li><a href="/hostel">Hostel</a></li>
             <li><a href="/library">Library</a></li>
-            <li><a href="/faculty">Faculty</a></li>
             <li><a href="/events">Events</a></li>
-
+            <li><a href="/departments">Departments</a></li>
             {/* Administration Dropdown */}
             <div className="dropdown" ref={dropdownRef}>
               <button onClick={toggleDropdown}>Administrators</button>
